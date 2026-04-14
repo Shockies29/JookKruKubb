@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>PaiTumBunn</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <html>
+<head>
+  <title>ไปทำบุญกันนนน</title>
+</head>
+<body style="
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f2efe9;
+  font-family: Arial, sans-serif;
+">
+
+  <!-- กล่องจดหมาย -->
+  <div style="
+    width: 600px;
+    background: #fffdf7;
+    border: 2px solid #d6cfc2;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    padding: 50px;
+    text-align: center;
+    margin-bottom: 40px;
+  ">
+    <p style="font-size: 20px; margin-bottom: 20px; color: #888;">
+      📩 จดหมายมาส่งจ้าา
+    </p>
+
+    <p style="font-size: 40px; line-height: 1.6;">
+      สวัสดี 👋<br>
+      เอเลี่ยน👽อยากชวนไปทำบุญ
+    </p>
+  </div>
+
+  <!-- ปุ่ม (อยู่กลางเป๊ะ) -->
+  <div style="
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  ">
+    
+    <!-- ไป -->
+    <button onclick="goTemple()" style="
+      padding: 20px 50px;
+      font-size: 24px;
+      border-radius: 8px;
+      cursor: pointer;
+    ">
+      ไปสิๆ🤩 
+    </button>
+
+    <!-- ไม่ไป -->
+    <button id="no-btn" onmouseover="dodge()" style="
+      padding: 20px 50px;
+      font-size: 24px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.6s;
+    ">
+      ไม่ไป มันร้อนอ่าา🥵
+    </button>
+
+  </div>
+
+  <script>
+    let speed = 1;
+
+    function dodge() {
+      let btn = document.getElementById("no-btn");
+
+      let maxX = window.innerWidth - btn.offsetWidth;
+      let maxY = window.innerHeight - btn.offsetHeight;
+
+      let x = Math.random() * maxX;
+      let y = Math.random() * maxY;
+
+      // ออกจาก layout แล้วหนี
+      btn.style.position = "fixed";
+      btn.style.left = x + "px";
+      btn.style.top  = y + "px";
+
+      speed += 0.075;
+      btn.style.transition = (0.6 / speed) + "s";
+    }
+
+    function goTemple() {
+      document.body.innerHTML = `
+        <div style="
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 50px;
+          background: #f2efe9;
+        ">
+          🎉 เย้ เจอกันพรุ่งนี้้้้! ✨
+        </div>
+      `;
+    }
+  </script>
+
+</body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
