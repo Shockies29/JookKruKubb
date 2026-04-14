@@ -32,6 +32,9 @@ body {
 .buttons {
   display: flex;
   gap: 40px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 button {
